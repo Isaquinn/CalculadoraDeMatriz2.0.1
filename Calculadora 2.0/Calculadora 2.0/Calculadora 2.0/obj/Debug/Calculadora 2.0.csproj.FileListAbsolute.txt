@@ -1,0 +1,18 @@
+c:\users\izarele\documents\visual studio 2012\Projects\Calculadora 2.0\Calculadora 2.0\bin\Debug\Calculadora 2.0.exe.config
+c:\users\izarele\documents\visual studio 2012\Projects\Calculadora 2.0\Calculadora 2.0\bin\Debug\Calculadora 2.0.exe
+c:\users\izarele\documents\visual studio 2012\Projects\Calculadora 2.0\Calculadora 2.0\bin\Debug\Calculadora 2.0.pdb
+c:\users\izarele\documents\visual studio 2012\Projects\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.csprojResolveAssemblyReference.cache
+c:\users\izarele\documents\visual studio 2012\Projects\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora_2._0.Form1.resources
+c:\users\izarele\documents\visual studio 2012\Projects\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora_2._0.Properties.Resources.resources
+c:\users\izarele\documents\visual studio 2012\Projects\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.csproj.GenerateResource.Cache
+c:\users\izarele\documents\visual studio 2012\Projects\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.exe
+c:\users\izarele\documents\visual studio 2012\Projects\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.pdb
+C:\Users\isaque.araujo\Downloads\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\bin\Debug\Calculadora 2.0.exe.config
+C:\Users\isaque.araujo\Downloads\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.exe
+C:\Users\isaque.araujo\Downloads\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.pdb
+C:\Users\isaque.araujo\Downloads\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\bin\Debug\Calculadora 2.0.exe
+C:\Users\isaque.araujo\Downloads\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\bin\Debug\Calculadora 2.0.pdb
+C:\Users\isaque.araujo\Downloads\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.csprojResolveAssemblyReference.cache
+C:\Users\isaque.araujo\Downloads\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora_2._0.Form1.resources
+C:\Users\isaque.araujo\Downloads\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora_2._0.Properties.Resources.resources
+C:\Users\isaque.araujo\Downloads\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.csproj.GenerateResource.Cache
