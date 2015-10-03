@@ -13,7 +13,7 @@ using Microsoft.CSharp;
 
 namespace Calculadora_2._0
 {
-    public partial class Form1 : Form
+    public partial class  Form1 : Form
     {
         int batata = 0;
         int adicionar = 0;
@@ -23,16 +23,21 @@ namespace Calculadora_2._0
         TextBox[,] matrizextra2;
         TextBox[,] resultante;
         Graphics cartesiano;
+        Graphics malhaquadriculada;
         int grid;
         int linhas, colunas, linhas2, colunas2;
         public Form1()
         {
             //groupBox3.Enabled = false;
             InitializeComponent();
+            button12.Visible = false;
             
             textBox5.Visible = false;
             cartesiano = pictureBox1.CreateGraphics();
             Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
+            groupBox5.Visible = false;
+
+           
           //cartesiano.DrawLine(pen, 20, 10, 300, 100);
             textBox1.Visible = false;
             label11.Visible = false;
@@ -49,6 +54,8 @@ namespace Calculadora_2._0
             textBox4.Visible = false;
             label14.Visible = false;
             button9.Visible = false;
+
+
         }
     
        
@@ -62,10 +69,19 @@ namespace Calculadora_2._0
             {
                 return;
             }*/
+            if (comboBox1.SelectedItem == null && comboBox2.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor selecione o número de linhas e de colunas ");
+                return;
+            }
+            if(comboBox1.SelectedItem == null || comboBox2.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor selecione o número de linhas e de colunas ");
+                return;
+            }
             linhas = Convert.ToInt32(comboBox1.SelectedItem.ToString());
 
             colunas = Convert.ToInt32(comboBox2.SelectedItem.ToString());
-
             int TamanhoText = groupBox1.Width / colunas;
             if (linhas > 10 || colunas > 10)
             {
@@ -101,6 +117,16 @@ namespace Calculadora_2._0
             {
                 return;
             }*/
+            if (comboBox3.SelectedItem == null && comboBox4.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor selecione o número de linhas e de colunas ");
+                return;
+            }
+            if (comboBox3.SelectedItem == null || comboBox4.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor selecione o número de linhas e de colunas ");
+                return;
+            }
             linhas2 = Convert.ToInt32(comboBox3.SelectedItem.ToString());
 
             colunas2 = Convert.ToInt32(comboBox4.SelectedItem.ToString());
@@ -135,6 +161,11 @@ namespace Calculadora_2._0
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if(comboBox5.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione alguma operação");
+                return;
+            }
             if (comboBox5.SelectedItem.ToString() == "Adição")
             {
                 radioButton3.Visible = true;
@@ -350,7 +381,11 @@ namespace Calculadora_2._0
                 ///Multiplicação por número real
                 if (comboBox5.SelectedItem.ToString() == "Multiplicação Por Número Real") 
                 {
-                    
+                    if (matriz == null)
+                    {
+                        MessageBox.Show("Primeiro você deve gerar a matriz");
+                        return;
+                    }
                     MessageBox.Show("Digite o valor na caixa que apareceu abaixo da matriz 1, com qual você quer que seja multiplicado a matriz 1");
                     label11.Visible = true;
                     textBox1.Visible = true;
@@ -377,6 +412,11 @@ namespace Calculadora_2._0
                 }
                 if (comboBox5.SelectedItem.ToString() == "Transposta")
                 {
+                    if (matriz == null)
+                    {
+                        MessageBox.Show("Primeiro você deve gerar a matriz");
+                        return;
+                    }
                     groupBox1.Controls.Clear();
                     float[,] tempMatriz1 = new float[matriz.GetLength(0), matriz.GetLength(1)];
                     //float[,] tempMatriz2 = new float[matriz2.GetLength(0), matriz2.GetLength(1)];
@@ -438,6 +478,11 @@ namespace Calculadora_2._0
                 if (comboBox5.SelectedItem.ToString() == "Oposta")
                 {
                     groupBox1.Controls.Clear();
+                    if (matriz == null)
+                    {
+                        MessageBox.Show("Primeiro você deve gerar a matriz");
+                        return;
+                    }
                     float[,] tempMatriz1 = new float[matriz.GetLength(0), matriz.GetLength(1)];
                     //float[,] tempMatriz2 = new float[matriz2.GetLength(0), matriz2.GetLength(1)];
                     //if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(0) || tempMatriz1.GetLength(1) != tempMatriz2.GetLength(1))
@@ -496,6 +541,11 @@ namespace Calculadora_2._0
                 string value;
                 if (comboBox5.SelectedItem.ToString() == "Determinate")
                 {
+                    if (matriz == null)
+                    {
+                        MessageBox.Show("Primeiro você deve gerar a matriz");
+                        return;
+                    }
 
                     if (comboBox1.SelectedItem.ToString() != comboBox2.SelectedItem.ToString())
                     {
@@ -528,6 +578,11 @@ namespace Calculadora_2._0
                 }
                 if (comboBox5.SelectedItem.ToString() == "Inversa")
                 {
+                    if (matriz == null)
+                    {
+                        MessageBox.Show("Primeiro você deve gerar a matriz");
+                        return;
+                    }
                     double[,] MT = new double[(matriz.GetLength(0)), (matriz.GetLength(1))];
                     for (int i = 0; i < matriz.GetLength(0); i++)
                     {
@@ -566,6 +621,11 @@ namespace Calculadora_2._0
 
                     if (comboBox5.SelectedItem.ToString() == "Multiplicação Por Número Real")
                     {
+                        if (matriz2 == null)
+                        {
+                            MessageBox.Show("Primeiro você deve gerar a matriz");
+                            return;
+                        }
 
                         MessageBox.Show("Digite o valor na caixa que apareceu abaixo da matriz 1, com qual você quer que seja multiplicado a matriz 1");
                         label12.Visible = true;
@@ -594,6 +654,11 @@ namespace Calculadora_2._0
                     if (comboBox5.SelectedItem.ToString() == "Transposta")
                     {
                         groupBox2.Controls.Clear();
+                        if (matriz2 == null)
+                        {
+                            MessageBox.Show("Primeiro você deve gerar a matriz");
+                            return;
+                        }
                         float[,] tempMatriz2 = new float[matriz2.GetLength(0), matriz2.GetLength(1)];
                         //float[,] tempMatriz2 = new float[matriz2.GetLength(0), matriz2.GetLength(1)];
                         //if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(0) || tempMatriz1.GetLength(1) != tempMatriz2.GetLength(1))
@@ -654,6 +719,13 @@ namespace Calculadora_2._0
                     if (comboBox5.SelectedItem.ToString() == "Oposta")
                     {
                         groupBox2.Controls.Clear();
+               
+                        
+                        if(matriz2 == null)
+                        {
+                            MessageBox.Show("Primeiro você deve gerar a matriz");
+                            return;
+                        }
                         float[,] tempMatriz1 = new float[matriz2.GetLength(0), matriz2.GetLength(1)];
                         //float[,] tempMatriz2 = new float[matriz2.GetLength(0), matriz2.GetLength(1)];
                         //if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(0) || tempMatriz1.GetLength(1) != tempMatriz2.GetLength(1))
@@ -715,6 +787,11 @@ namespace Calculadora_2._0
                     string value2;
                     if (comboBox5.SelectedItem.ToString() == "Determinate")
                     {
+                        if (matriz2 == null)
+                        {
+                            MessageBox.Show("Primeiro você deve gerar a matriz");
+                            return;
+                        }
 
                         if (comboBox3.SelectedItem.ToString() != comboBox4.SelectedItem.ToString())
                         {
@@ -751,6 +828,11 @@ namespace Calculadora_2._0
 
                if (comboBox5.SelectedItem.ToString() == "Multiplicação Por Número Real")
                     {
+                        if (resultante == null)
+                        {
+                            MessageBox.Show("Primeiro a matriz deve ser gerada");
+                            return;
+                        }
 
                         MessageBox.Show("Digite o valor na caixa que apareceu abaixo da matriz 1, com qual você quer que seja multiplicado a matriz 1");
                         label13.Visible = true;
@@ -779,6 +861,11 @@ namespace Calculadora_2._0
                     if (comboBox5.SelectedItem.ToString() == "Transposta")
                     {
                         groupBox3.Controls.Clear();
+                        if (resultante == null)
+                        {
+                            MessageBox.Show("Primeiro a matriz deve ser gerada");
+                            return;
+                        }
                         float[,] tempMatriz2 = new float[resultante.GetLength(0), resultante.GetLength(1)];
                         //float[,] tempMatriz2 = new float[matriz2.GetLength(0), matriz2.GetLength(1)];
                         //if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(0) || tempMatriz1.GetLength(1) != tempMatriz2.GetLength(1))
@@ -839,6 +926,11 @@ namespace Calculadora_2._0
                     if (comboBox5.SelectedItem.ToString() == "Oposta")
                     {
                         groupBox3.Controls.Clear();
+                        if (resultante == null)
+                        {
+                            MessageBox.Show("Primeiro a matriz deve ser gerada");
+                            return;
+                        }
                         float[,] tempMatriz1 = new float[resultante.GetLength(0), resultante.GetLength(1)];
                         //float[,] tempMatriz2 = new float[matriz2.GetLength(0), matriz2.GetLength(1)];
                         //if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(0) || tempMatriz1.GetLength(1) != tempMatriz2.GetLength(1))
@@ -900,6 +992,11 @@ namespace Calculadora_2._0
                     string value2;
                     if (comboBox5.SelectedItem.ToString() == "Determinate")
                     {
+                        if (resultante == null)
+                        {
+                            MessageBox.Show("Primeiro a matriz deve ser gerada");
+                            return;
+                        }
 
                       
 
@@ -931,8 +1028,12 @@ namespace Calculadora_2._0
         TextBox[,] desenho;
         TextBox[,] matrizrotacao;
         private void button4_Click(object sender, EventArgs e)
-        {   
+        {
+            Graphics g = pictureBox1.CreateGraphics();
             groupBox4.Controls.Clear();
+            groupBox6.Controls.Clear();
+            button12.Visible = false;
+            g.Clear(Color.White);
             /*if (textBox1.Text == "0" || textBox1.Text == "" || textBox2.Text == "0" || textBox2.Text == "")
             {
                 return;
@@ -968,7 +1069,7 @@ namespace Calculadora_2._0
             groupBox2.Controls.Clear();
             linhas2 = 2;
             colunas2 = 2;
-            int TamanhoText2 = groupBox2.Width / colunas2;
+            int TamanhoText2 = groupBox5.Width / colunas2;
 
 
             matrizrotacao = new TextBox[linhas2, colunas2];
@@ -978,7 +1079,7 @@ namespace Calculadora_2._0
                 for (int y = 0; y < matrizrotacao.GetLength(1); y++)
                 {
                     matrizrotacao[x, y] = new TextBox();
-                   
+                    matrizrotacao[x, y].Text = "0";
                     matrizrotacao[x, y].TextAlign = HorizontalAlignment.Center;
                     matrizrotacao[x, y].Top = (x * matrizrotacao[x, y].Height) + 20;
                     matrizrotacao[x, y].Left = y * TamanhoText2;
@@ -989,16 +1090,17 @@ namespace Calculadora_2._0
 
         }
 
+        Point[] pontos;
         private void button5_Click(object sender, EventArgs e)
         {
-            
+          
             batata += 1;
-            Graphics g = pictureBox1.CreateGraphics();
+          
           
 
                             Pen blackPen = new Pen(Color.Red, 1);
                             
-                            Point[] pontos;
+                            
 
                             pontos = new Point[desenho.GetLength(1)];
                             List<Point> point2 = new List<Point>();
@@ -1015,7 +1117,12 @@ namespace Calculadora_2._0
 
                                 //MessageBox.Show("allahu akbar :" + desenho[0, i].Text + ", " + desenho[1, i].Text);
                             }
+                           
+                            Graphics g = pictureBox1.CreateGraphics();
+                            g.Clear(Color.White);
                             g.DrawPolygon(blackPen, pontos);
+                           
+                            
                             
 
                             
@@ -1456,11 +1563,11 @@ namespace Calculadora_2._0
 
         private void button10_Click_1(object sender, EventArgs e)
         {
-            matrizrotacao[0, 0].Text = Math.Cos(Convert.ToDouble(textBox7.Text)).ToString();
-            matrizrotacao[0, 1].Text = Math.Sin(-Convert.ToDouble(textBox7.Text)).ToString();
-            matrizrotacao[1, 0].Text = Math.Sin(Convert.ToDouble(textBox7.Text)).ToString();
-            matrizrotacao[1, 1].Text = Math.Cos(Convert.ToDouble(textBox7.Text)).ToString();
-            double[,] tempMatriz1 = new double[desenho.GetLength(0), desenho.GetLength(1)];
+            matrizrotacao[0, 0].Text = Math.Cos(Convert.ToDouble(textBox7.Text)* (Math.PI / 180)).ToString() ;
+             matrizrotacao[0, 1].Text = Math.Sin(-Convert.ToDouble(textBox7.Text)* (Math.PI / 180)).ToString();
+            matrizrotacao[1, 0].Text = Math.Sin(Convert.ToDouble(textBox7.Text)* (Math.PI / 180)).ToString();
+           matrizrotacao[1, 1].Text = Math.Cos(Convert.ToDouble(textBox7.Text)* (Math.PI / 180)).ToString();
+            double[,] tempMatriz1 =  new double[desenho.GetLength(0), desenho.GetLength(1)];
             double[,] tempMatriz2 = new double[matrizrotacao.GetLength(0), matrizrotacao.GetLength(1)];
             if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(1))
             {
@@ -1497,39 +1604,157 @@ namespace Calculadora_2._0
                 }
             }
 
-            double[,] tempMatrizResultante = Calculos.MultiplicarMatrizesDesenho(tempMatriz2, tempMatriz1);
-            TextBox[,] resultante = new TextBox[tempMatrizResultante.GetLength(0), tempMatrizResultante.GetLength(1)];
-            int TamanhoText = groupBox4.Width / resultante.GetLength(1);
+            double[,] tempMatrizResultante = Calculos.MultiplicarMatrizesDesenho(tempMatriz1, tempMatriz2);
+            desenho = new TextBox[tempMatrizResultante.GetLength(0), tempMatrizResultante.GetLength(1)];
+            int TamanhoText = groupBox4.Width / desenho.GetLength(1);
             groupBox4.Controls.Clear();
-            for (int x = 0; x < resultante.GetLength(0); x++)
+            for (int x = 0; x < desenho.GetLength(0); x++)
             {
-                for (int y = 0; y < resultante.GetLength(1); y++)
+                for (int y = 0; y < desenho.GetLength(1); y++)
                 {
-                    resultante[x, y] = new TextBox();
-                    resultante[x, y].TextAlign = HorizontalAlignment.Center;
+                    desenho[x, y] = new TextBox();
+                    desenho[x, y].TextAlign = HorizontalAlignment.Center;
 
-                    resultante[x, y].Text = tempMatrizResultante[x, y].ToString();
-                    resultante[x, y].Top = (x * resultante[x, y].Height) + 20;
-                    resultante[x, y].Left = y * TamanhoText;
-                    resultante[x, y].Width = TamanhoText;
-                    groupBox4.Controls.Add(resultante[x, y]);
+                    desenho[x, y].Text = tempMatrizResultante[x, y].ToString();
+                    desenho[x, y].Top = (x * desenho[x, y].Height) + 20;
+                    desenho[x, y].Left = y * TamanhoText;
+                    desenho[x, y].Width = TamanhoText;
+                    groupBox4.Controls.Add(desenho[x, y]);
+                    //MessageBox.Show("" + resultante[x,y]);
                 }
             }
-            Graphics g = pictureBox2.CreateGraphics();
 
+            Graphics j = pictureBox1.CreateGraphics();
 
+            j.Clear(Color.White);
             Pen blackPen = new Pen(Color.Red, 1);
 
-            Point[] pontos;
+            PointF[] pontos;
 
-            pontos = new Point[resultante.GetLength(1)];
+            pontos = new PointF[desenho.GetLength(1)];
             List<Point> point2 = new List<Point>();
             //pontos = new Point(x, y);
-            for (int i = 0; i < resultante.GetLength(1); i++)
+            for (int i = 0; i < desenho.GetLength(1); i++)
             {
 
 
-                //pontos[i] = new Point(Convert.ToInt32(resultante[0, i].Text), -Convert.ToInt32(resultante[1, i].Text));
+                pontos[i] = new PointF(Convert.ToSingle(desenho[0, i].Text), -Convert.ToSingle(desenho[1, i].Text));
+                pontos[i].X += pictureBox1.Width / 2;
+                pontos[i].Y += pictureBox1.Height / 2;
+
+                //j.DrawPolygon(blackPen, pontos);
+
+                //MessageBox.Show("allahu akbar :" + desenho[0, i].Text + ", " + desenho[1, i].Text);
+            }
+            j.DrawPolygon(blackPen, pontos);
+           
+          
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+        TextBox[,] translacaomatriz;
+        int linhast;
+        int colunast;
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            button12.Visible = true;
+            linhast = Convert.ToInt32(comboBox6.SelectedItem.ToString());
+            colunast = Convert.ToInt32(comboBox7.SelectedItem.ToString());
+            translacaomatriz =  new TextBox[linhast,colunast];
+            int TamanhoText = groupBox4.Width / colunast;
+
+            for (int x = 0; x < translacaomatriz.GetLength(0); x++)
+            {
+                for (int y = 0; y < translacaomatriz.GetLength(1); y++)
+                {
+                    translacaomatriz[x, y] = new TextBox();
+                    translacaomatriz[x, y].Text = "0";
+                    translacaomatriz[x, y].KeyPress += new KeyPressEventHandler(keypressed);
+                    translacaomatriz[x, y].TextAlign = HorizontalAlignment.Center;
+                    translacaomatriz[x, y].Top = (x * translacaomatriz[x, y].Height) + 20;
+                    translacaomatriz[x, y].Left = y * TamanhoText;
+                    translacaomatriz[x, y].Width = TamanhoText;
+                    groupBox6.Controls.Add(translacaomatriz[x, y]);
+
+
+
+
+                }
+            }
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            float[,] tempMatriz1 = new float[desenho.GetLength(0), desenho.GetLength(1)];
+            float[,] tempMatriz2 = new float[translacaomatriz.GetLength(0), translacaomatriz.GetLength(1)];
+            if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(0) || tempMatriz1.GetLength(1) != tempMatriz2.GetLength(1))
+            {
+                MessageBox.Show("So e possivel a soma de matrizes de mesma ordem !", "Erro - Soma Matrizes");
+                return;
+            }
+
+
+
+            for (int x = 0; x < desenho.GetLength(0); x++)
+            {
+
+                for (int y = 0; y < desenho.GetLength(1); y++)
+                {
+
+                    float n = 0;
+                    float.TryParse(desenho[x, y].Text, out n);
+                    tempMatriz1[x, y] = n;
+
+
+                }
+            }
+            for (int x = 0; x < translacaomatriz.GetLength(0); x++)
+            {
+                for (int y = 0; y < translacaomatriz.GetLength(1); y++)
+                {
+
+                    float n = 0;
+                    float.TryParse(translacaomatriz[x, y].Text, out n);
+                    tempMatriz2[x, y] = n;
+
+
+                }
+            }
+
+            float[,] tempMatrizResultante = Calculos.SomarMatrizes(tempMatriz1, tempMatriz2);
+             desenho = new TextBox[tempMatrizResultante.GetLength(0), tempMatrizResultante.GetLength(1)];
+            int TamanhoText = groupBox4.Width / desenho.GetLength(1);
+            groupBox4.Controls.Clear();
+            for (int x = 0; x < desenho.GetLength(0); x++)
+            {
+                for (int y = 0; y < desenho.GetLength(1); y++)
+                {
+                    desenho[x, y] = new TextBox();
+                    desenho[x, y].KeyPress += new KeyPressEventHandler(keypressed);
+                    desenho[x, y].TextAlign = HorizontalAlignment.Center;
+                    desenho[x, y].Text = tempMatrizResultante[x, y].ToString();
+                    desenho[x, y].Top = (x * desenho[x, y].Height) + 20;
+                    desenho[x, y].Left = y * TamanhoText;
+                    desenho[x, y].Width = TamanhoText;
+                    groupBox4.Controls.Add(desenho[x, y]);
+                }
+            }
+            Pen blackPen = new Pen(Color.Blue );
+
+            
+
+            pontos = new Point[desenho.GetLength(1)];
+            List<Point> point2 = new List<Point>();
+            //pontos = new Point(x, y);
+            for (int i = 0; i < desenho.GetLength(1); i++)
+            {
+
+
+                pontos[i] = new Point(Convert.ToInt32(desenho[0, i].Text), -Convert.ToInt32(desenho[1, i].Text));
                 pontos[i].X += pictureBox1.Width / 2;
                 pontos[i].Y += pictureBox1.Height / 2;
 
@@ -1537,8 +1762,21 @@ namespace Calculadora_2._0
 
                 //MessageBox.Show("allahu akbar :" + desenho[0, i].Text + ", " + desenho[1, i].Text);
             }
+
+            Graphics g = pictureBox1.CreateGraphics();
+            g.Clear(Color.White);
             g.DrawPolygon(blackPen, pontos);
-          
+                           
+                            
+                            
+
+                            
+
+
+                           
+                           
+                
+         
         }
        
 

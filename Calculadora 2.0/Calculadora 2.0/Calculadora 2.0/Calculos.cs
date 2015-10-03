@@ -62,15 +62,15 @@ namespace Calculadora_2._0
         public static double[,] MultiplicarMatrizesDesenho(double[,] desenho, double[,] matrizrotacao)
         {   
           
-            matrizResultante2 = new double[desenho.GetLength(0), matrizrotacao.GetLength(1)];
+            matrizResultante2 = new double[matrizrotacao.GetLength(0), desenho.GetLength(1)];
             for (int x = 0; x < matrizResultante2.GetLength(0); x++)
             {
                 for (int y = 0; y < matrizResultante2.GetLength(1); y++)
                 {
-                    for (int n = 0; n < matrizrotacao.GetLength(0); n++)
+                    for (int n = 0; n < desenho.GetLength(0); n++)
                     {
 
-                        matrizResultante2[x, y] += desenho[x, n] * matrizrotacao[n, y];
+                        matrizResultante2[x, y] += matrizrotacao[x ,n] * desenho[n, y];
                     }
                 }
             }
@@ -211,6 +211,21 @@ namespace Calculadora_2._0
                 }
             }
             return Inver;
+        }
+        public static float[,] SomarMatrizesDesenho(float[,] Desenho, float[,] matriz2)
+        {
+            float[,] matrizResultante = new float[Desenho.GetLongLength(0), Desenho.GetLength(1)];
+            for (int x = 0; x < matrizResultante.GetLength(0); x++)
+            {
+                for (int y = 0; y < matrizResultante.GetLength(1); y++)
+                {
+
+                    matrizResultante[x, y] = Desenho[x, y] += matriz2[x, y];
+
+                }
+            }
+            return matrizResultante;
+
         }
 
 
