@@ -1034,10 +1034,16 @@ namespace Calculadora_2._0
             groupBox6.Controls.Clear();
             button12.Visible = false;
             g.Clear(Color.White);
-            /*if (textBox1.Text == "0" || textBox1.Text == "" || textBox2.Text == "0" || textBox2.Text == "")
+            if(comboBox6.SelectedItem == null && comboBox7.SelectedItem == null)
             {
+                MessageBox.Show("Selecione o número de linhas e colunas");
                 return;
-            }*/
+            }
+            if (comboBox6.SelectedItem == null || comboBox7.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione o número de linhas e colunas");
+                return;
+            }
             linhasDesenho = Convert.ToInt32(comboBox6.SelectedItem.ToString());
 
             colunasDesenho = Convert.ToInt32(comboBox7.SelectedItem.ToString());
@@ -1094,6 +1100,12 @@ namespace Calculadora_2._0
         private void button5_Click(object sender, EventArgs e)
         {
           
+            if(desenho == null)
+            {
+                MessageBox.Show("Primeiro crier a matriz e escreva seus pontos");
+                return;
+            
+            }
             batata += 1;
           
           
@@ -1563,10 +1575,23 @@ namespace Calculadora_2._0
 
         private void button10_Click_1(object sender, EventArgs e)
         {
-            matrizrotacao[0, 0].Text = Math.Cos(Convert.ToDouble(textBox7.Text)* (Math.PI / 180)).ToString() ;
-             matrizrotacao[0, 1].Text = Math.Sin(-Convert.ToDouble(textBox7.Text)* (Math.PI / 180)).ToString();
-            matrizrotacao[1, 0].Text = Math.Sin(Convert.ToDouble(textBox7.Text)* (Math.PI / 180)).ToString();
-           matrizrotacao[1, 1].Text = Math.Cos(Convert.ToDouble(textBox7.Text)* (Math.PI / 180)).ToString();
+         
+            if(desenho == null)
+            {
+                MessageBox.Show("Primeiro crie e desenhe a figura");
+
+                return;
+            }
+            if(textBox7.Text == "")
+            {
+                MessageBox.Show("Escreva o angulo na qual o desenho será rotacionado");
+                return;
+
+            }
+            matrizrotacao[0, 0].Text = Math.Cos(Convert.ToDouble(textBox7.Text) * (Math.PI / 180)).ToString();
+            matrizrotacao[0, 1].Text = Math.Sin(-Convert.ToDouble(textBox7.Text) * (Math.PI / 180)).ToString();
+            matrizrotacao[1, 0].Text = Math.Sin(Convert.ToDouble(textBox7.Text) * (Math.PI / 180)).ToString();
+            matrizrotacao[1, 1].Text = Math.Cos(Convert.ToDouble(textBox7.Text) * (Math.PI / 180)).ToString();
             double[,] tempMatriz1 =  new double[desenho.GetLength(0), desenho.GetLength(1)];
             double[,] tempMatriz2 = new double[matrizrotacao.GetLength(0), matrizrotacao.GetLength(1)];
             if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(1))
@@ -1660,6 +1685,12 @@ namespace Calculadora_2._0
         int colunast;
         private void button11_Click_1(object sender, EventArgs e)
         {
+            
+            if(desenho == null)
+            {
+                MessageBox.Show("Primeiro crie a matriz prinpal e desenhe a figura");
+                return;
+            }
             button12.Visible = true;
             linhast = Convert.ToInt32(comboBox6.SelectedItem.ToString());
             colunast = Convert.ToInt32(comboBox7.SelectedItem.ToString());
