@@ -1720,6 +1720,8 @@ namespace Calculadora_2._0
 
         private void button12_Click(object sender, EventArgs e)
         {
+            groupBox5.Controls.Clear();
+            groupBox4.Controls.Clear();
             float[,] tempMatriz1 = new float[desenho.GetLength(0), desenho.GetLength(1)];
             float[,] tempMatriz2 = new float[translacaomatriz.GetLength(0), translacaomatriz.GetLength(1)];
             if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(0) || tempMatriz1.GetLength(1) != tempMatriz2.GetLength(1))
@@ -1808,6 +1810,72 @@ namespace Calculadora_2._0
                            
                 
          
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Calculos.numberDesenho = Convert.ToDouble(textBox8.Text);
+
+
+            groupBox4.Controls.Clear();
+            double[,] tempMatriz1 = new double[desenho.GetLength(0), desenho.GetLength(1)];
+
+            for (int x = 0; x < desenho.GetLength(0); x++)
+            {
+
+                for (int y = 0; y < desenho.GetLength(1); y++)
+                {
+
+                    double n = 0;
+                    double.TryParse(desenho[x, y].Text, out n);
+                    tempMatriz1[x, y] = n;
+
+
+                }
+            }
+
+
+            double[,] tempMatrizResultante = Calculos.NumeroRealDesenho(tempMatriz1);
+            desenho = new TextBox[tempMatrizResultante.GetLength(0), tempMatrizResultante.GetLength(1)];
+            int TamanhoText = groupBox4.Width / desenho.GetLength(1);
+
+            for (int x = 0; x < desenho.GetLength(0); x++)
+            {
+                for (int y = 0; y < desenho.GetLength(1); y++)
+                {
+                    desenho[x, y] = new TextBox();
+                    desenho[x, y].KeyPress += new KeyPressEventHandler(keypressed);
+                    desenho[x, y].TextAlign = HorizontalAlignment.Center;
+                    desenho[x, y].Text = tempMatrizResultante[x, y].ToString();
+                    desenho[x, y].Top = (x * desenho[x, y].Height) + 20;
+                    desenho[x, y].Left = y * TamanhoText;
+                    desenho[x, y].Width = TamanhoText;
+                    groupBox4.Controls.Add(desenho[x, y]);
+                }
+            }
+            Pen blackPen = new Pen(Color.Blue);
+
+
+            PointF[] pontos;
+            pontos = new PointF[desenho.GetLength(1)];
+            List<Point> point2 = new List<Point>();
+            //pontos = new Point(x, y);
+            for (int i = 0; i < desenho.GetLength(1); i++)
+            {
+
+
+                pontos[i] = new PointF(Convert.ToSingle(desenho[0, i].Text), -Convert.ToSingle(desenho[1, i].Text));
+                pontos[i].X += pictureBox1.Width / 2;
+                pontos[i].Y += pictureBox1.Height / 2;
+
+                //g.DrawPolygon(blackPen, pontos);
+
+                //MessageBox.Show("allahu akbar :" + desenho[0, i].Text + ", " + desenho[1, i].Text);
+            }
+
+            Graphics g = pictureBox1.CreateGraphics();
+            g.Clear(Color.White);
+            g.DrawPolygon(blackPen, pontos);
         }
        
 

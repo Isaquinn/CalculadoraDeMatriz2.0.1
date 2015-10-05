@@ -96,6 +96,25 @@ namespace Calculadora_2._0
             }
             return matrizResultante;
         }
+        //Multiplicar por número real Desenho
+        public static double numberDesenho;
+        public static double[,] NumeroRealDesenho(double[,] matriz)
+        {
+
+
+            double[,] matrizResultante = new double[matriz.GetLongLength(0), matriz.GetLength(1)];
+            for (int x = 0; x < matrizResultante.GetLength(0); x++)
+            {
+                for (int y = 0; y < matrizResultante.GetLength(1); y++)
+                {
+
+                    matrizResultante[x, y] += matriz[x, y] * numberDesenho;
+
+
+                }
+            }
+            return matrizResultante;
+        }
         //Transposta
         public static float[,] Transposta1(float[,] matriz)
         {
