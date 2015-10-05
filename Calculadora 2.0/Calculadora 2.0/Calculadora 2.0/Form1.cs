@@ -30,6 +30,8 @@ namespace Calculadora_2._0
         {
             //groupBox3.Enabled = false;
             InitializeComponent();
+            this.MaximizeBox = false;
+            
             button12.Visible = false;
             
             textBox5.Visible = false;
@@ -1059,7 +1061,7 @@ namespace Calculadora_2._0
                 {
                     desenho[x, y] = new TextBox();
                     desenho[x, y].Text = "0";
-                    //matriz[x, y].KeyPress += new KeyPressEventHandler(keypressed);
+                   desenho[x, y].KeyPress += new KeyPressEventHandler(keypressed);
                     desenho[x, y].TextAlign = HorizontalAlignment.Center;
                     desenho[x, y].Top = (x * desenho[x, y].Height) + 20;
                     desenho[x, y].Left = y * TamanhoText;
@@ -1876,6 +1878,70 @@ namespace Calculadora_2._0
             Graphics g = pictureBox1.CreateGraphics();
             g.Clear(Color.White);
             g.DrawPolygon(blackPen, pontos);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44 && e.KeyChar != (char)45)
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44 && e.KeyChar != (char)45)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44 && e.KeyChar != (char)45)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44 && e.KeyChar != (char)45 && e.KeyChar != (char)10 && e.KeyChar != (char)74 && e.KeyChar != (char)106 && e.KeyChar != (char)42 && e.KeyChar != (char)105 && e.KeyChar != (char)43 && e.KeyChar != (char)40 && e.KeyChar != (char)41)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44 && e.KeyChar != (char)45)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)44 && e.KeyChar != (char)45)
+            {
+                e.Handled = true;
+            }
         }
        
 

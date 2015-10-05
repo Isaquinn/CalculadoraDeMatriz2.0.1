@@ -25,3 +25,12 @@ C:\Users\Izarele\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.
 C:\Users\Izarele\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora_2._0.Form1.resources
 C:\Users\Izarele\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora_2._0.Properties.Resources.resources
 C:\Users\Izarele\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.csproj.GenerateResource.Cache
+C:\Users\isaque.araujo\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\bin\Debug\Calculadora 2.0.exe.config
+C:\Users\isaque.araujo\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.exe
+C:\Users\isaque.araujo\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.pdb
+C:\Users\isaque.araujo\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\bin\Debug\Calculadora 2.0.exe
+C:\Users\isaque.araujo\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\bin\Debug\Calculadora 2.0.pdb
+C:\Users\isaque.araujo\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.csprojResolveAssemblyReference.cache
+C:\Users\isaque.araujo\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora_2._0.Form1.resources
+C:\Users\isaque.araujo\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora_2._0.Properties.Resources.resources
+C:\Users\isaque.araujo\Desktop\CalculadoraDeMatriz2.0.1\Calculadora 2.0\Calculadora 2.0\Calculadora 2.0\obj\Debug\Calculadora 2.0.csproj.GenerateResource.Cache

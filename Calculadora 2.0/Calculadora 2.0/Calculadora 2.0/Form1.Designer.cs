@@ -67,6 +67,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.button13 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -88,8 +90,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.CalculadoraMatriz.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -155,7 +155,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(592, 408);
+            this.textBox5.Location = new System.Drawing.Point(592, 415);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(77, 20);
             this.textBox5.TabIndex = 32;
@@ -178,15 +178,16 @@
             this.textBox4.Size = new System.Drawing.Size(77, 20);
             this.textBox4.TabIndex = 30;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(317, 415);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(145, 13);
+            this.label14.Size = new System.Drawing.Size(155, 13);
             this.label14.TabIndex = 29;
-            this.label14.Text = "Multiplicaçaõ por número real";
+            this.label14.Text = "Gerar Matriz A partir de Fórmula";
             // 
             // button8
             // 
@@ -205,6 +206,7 @@
             this.textBox3.Size = new System.Drawing.Size(31, 20);
             this.textBox3.TabIndex = 27;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // label13
             // 
@@ -244,6 +246,7 @@
             this.textBox2.Size = new System.Drawing.Size(31, 20);
             this.textBox2.TabIndex = 23;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label12
             // 
@@ -280,6 +283,7 @@
             this.textBox1.Size = new System.Drawing.Size(31, 20);
             this.textBox1.TabIndex = 19;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label8
             // 
@@ -343,6 +347,7 @@
             // 
             // comboBox5
             // 
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
             "Adição",
@@ -380,6 +385,7 @@
             // 
             // comboBox4
             // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "1",
@@ -408,6 +414,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "1",
@@ -482,6 +489,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "1",
@@ -501,6 +509,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "1",
@@ -557,6 +566,25 @@
             this.tabPage2.Size = new System.Drawing.Size(892, 486);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Desenho";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(137, 248);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(31, 20);
+            this.textBox8.TabIndex = 22;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(47, 245);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 21;
+            this.button13.Text = "Escala";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // label19
             // 
@@ -647,6 +675,8 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(31, 20);
             this.textBox7.TabIndex = 12;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // button10
             // 
@@ -670,6 +700,7 @@
             // 
             // comboBox7
             // 
+            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
             "1",
@@ -691,6 +722,7 @@
             // 
             // comboBox6
             // 
+            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
             "2"});
@@ -767,23 +799,6 @@
             this.textBox6.TabIndex = 2;
             this.textBox6.Text = resources.GetString("textBox6.Text");
             // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(47, 245);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 21;
-            this.button13.Text = "Escala";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(137, 248);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(31, 20);
-            this.textBox8.TabIndex = 22;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -791,7 +806,7 @@
             this.ClientSize = new System.Drawing.Size(902, 516);
             this.Controls.Add(this.CalculadoraMatriz);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calculadora De Matrizes 2.0";
             this.CalculadoraMatriz.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
