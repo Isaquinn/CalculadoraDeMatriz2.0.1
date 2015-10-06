@@ -1034,8 +1034,117 @@ namespace Calculadora_2._0
             groupBox6.Controls.Clear();
             button12.Visible = false;
            // pictureBox1.Image = Properties.Resources.vem_bicho;
+            g.Clear(Color.White);
 
-            g.Clear(Color.Transparent);
+            cartesiano = pictureBox1.CreateGraphics();
+            Pen pen = new Pen(Color.Black);
+
+            Point point1 = new Point(0, 20);
+            Point point2 = new Point(340, 20);
+            Point point3 = new Point(0, 40);
+            Point point4 = new Point(340, 40);
+            Point point5 = new Point(0, 60);
+            Point point6 = new Point(340, 60);
+            Point point7 = new Point(0, 80);
+            Point point8 = new Point(340, 80);
+            Point point9 = new Point(0, 100);
+            Point point10 = new Point(340, 100);
+            Point point11 = new Point(0, 120);
+            Point point12 = new Point(340, 120);
+            Point point13 = new Point(0, 140);
+            Point point14 = new Point(340, 140);
+            Point point15 = new Point(0, 160);
+            Point point16 = new Point(340, 160);
+            Point point17 = new Point(0, 180);
+            Point point18 = new Point(340, 180);
+            Point point19 = new Point(0, 200);
+            Point point20 = new Point(340, 200);
+            Point point21 = new Point(0, 220);
+            Point point22 = new Point(340, 220);
+            Point point23 = new Point(0, 240);
+            Point point24 = new Point(340, 240);
+            Point point25 = new Point(0, 260);
+            Point point26 = new Point(340, 260);
+            Point point27 = new Point(0, 280);
+            Point point28 = new Point(340, 280);
+            Point point29 = new Point(0, 300);
+            Point point30 = new Point(340, 300);
+            Point point31 = new Point(0, 320);
+            Point point32 = new Point(340, 320);
+            Point point33 = new Point(0, 340);
+            Point point34 = new Point(340, 340);
+
+
+            cartesiano.DrawLine(pen, point1, point2);
+            cartesiano.DrawLine(pen, point3, point4);
+            cartesiano.DrawLine(pen, point5, point6);
+            cartesiano.DrawLine(pen, point7, point8);
+            cartesiano.DrawLine(pen, point9, point10);
+            cartesiano.DrawLine(pen, point11, point12);
+            cartesiano.DrawLine(pen, point13, point14);
+            cartesiano.DrawLine(pen, point15, point16);
+            cartesiano.DrawLine(pen, point17, point18);
+            cartesiano.DrawLine(pen, point19, point20);
+            cartesiano.DrawLine(pen, point21, point22);
+            cartesiano.DrawLine(pen, point23, point24);
+            cartesiano.DrawLine(pen, point25, point26);
+            cartesiano.DrawLine(pen, point27, point28);
+            cartesiano.DrawLine(pen, point29, point30);
+            cartesiano.DrawLine(pen, point31, point32);
+            cartesiano.DrawLine(pen, point33, point34);
+
+            Point point35 = new Point(20, 0);
+            Point point36 = new Point(20, 340);
+            Point point37 = new Point(40, 0);
+            Point point38 = new Point(40, 340);
+            Point point39 = new Point(60, 0);
+            Point point40 = new Point(60, 340);
+            Point point41 = new Point(80, 0);
+            Point point42 = new Point(80, 340);
+            Point point43 = new Point(100, 0);
+            Point point44 = new Point(100, 340);
+            Point point45 = new Point(120, 0);
+            Point point46 = new Point(120, 340);
+            Point point47 = new Point(140, 0);
+            Point point48 = new Point(140, 340);
+            Point point49 = new Point(160, 0);
+            Point point50 = new Point(160, 340);
+            Point point51 = new Point(180, 0);
+            Point point52 = new Point(180, 340);
+            Point point53 = new Point(200, 0);
+            Point point54 = new Point(200, 340);
+            Point point55 = new Point(220, 0);
+            Point point56 = new Point(220, 340);
+            Point point57 = new Point(240, 0);
+            Point point58 = new Point(240, 340);
+            Point point59 = new Point(260, 0);
+            Point point60 = new Point(260, 340);
+            Point point61 = new Point(280, 0);
+            Point point62 = new Point(280, 340);
+            Point point63 = new Point(300, 0);
+            Point point64 = new Point(300, 340);
+            Point point65 = new Point(320, 0);
+            Point point66 = new Point(320, 340);
+            Point point67 = new Point(340, 0);
+            Point point68 = new Point(340, 340);
+            cartesiano.DrawLine(pen, point35, point36);
+            cartesiano.DrawLine(pen, point37, point38);
+            cartesiano.DrawLine(pen, point39, point40);
+            cartesiano.DrawLine(pen, point41, point42);
+            cartesiano.DrawLine(pen, point43, point44);
+            cartesiano.DrawLine(pen, point45, point46);
+            cartesiano.DrawLine(pen, point47, point48);
+            cartesiano.DrawLine(pen, point49, point50);
+            cartesiano.DrawLine(pen, point51, point52);
+            cartesiano.DrawLine(pen, point53, point54);
+            cartesiano.DrawLine(pen, point55, point56);
+            cartesiano.DrawLine(pen, point57, point58);
+            cartesiano.DrawLine(pen, point59, point60);
+            cartesiano.DrawLine(pen, point61, point62);
+            cartesiano.DrawLine(pen, point63, point64);
+            cartesiano.DrawLine(pen, point65, point66);
+            cartesiano.DrawLine(pen, point67, point68);
+        
             if(comboBox6.SelectedItem == null && comboBox7.SelectedItem == null)
             {
                 MessageBox.Show("Selecione o número de linhas e colunas");
@@ -1134,10 +1243,119 @@ namespace Calculadora_2._0
                            
                             Graphics g = pictureBox1.CreateGraphics();
                             
-                            g.Clear(Color.Transparent);
+                            g.Clear(Color.White);
            
                             g.DrawPolygon(blackPen, pontos);
                            // pictureBox1.Image = Properties.Resources.vem_bicho;
+                            cartesiano = pictureBox1.CreateGraphics();
+                            Pen pen2 = new Pen(Color.Black);
+
+                            Point point1 = new Point(0, 20);
+                            Point pointhue = new Point(340, 20);
+                            Point point3 = new Point(0, 40);
+                            Point point4 = new Point(340, 40);
+                            Point point5 = new Point(0, 60);
+                            Point point6 = new Point(340, 60);
+                            Point point7 = new Point(0, 80);
+                            Point point8 = new Point(340, 80);
+                            Point point9 = new Point(0, 100);
+                            Point point10 = new Point(340, 100);
+                            Point point11 = new Point(0, 120);
+                            Point point12 = new Point(340, 120);
+                            Point point13 = new Point(0, 140);
+                            Point point14 = new Point(340, 140);
+                            Point point15 = new Point(0, 160);
+                            Point point16 = new Point(340, 160);
+                            Point point17 = new Point(0, 180);
+                            Point point18 = new Point(340, 180);
+                            Point point19 = new Point(0, 200);
+                            Point point20 = new Point(340, 200);
+                            Point point21 = new Point(0, 220);
+                            Point point22 = new Point(340, 220);
+                            Point point23 = new Point(0, 240);
+                            Point point24 = new Point(340, 240);
+                            Point point25 = new Point(0, 260);
+                            Point point26 = new Point(340, 260);
+                            Point point27 = new Point(0, 280);
+                            Point point28 = new Point(340, 280);
+                            Point point29 = new Point(0, 300);
+                            Point point30 = new Point(340, 300);
+                            Point point31 = new Point(0, 320);
+                            Point point32 = new Point(340, 320);
+                            Point point33 = new Point(0, 340);
+                            Point point34 = new Point(340, 340);
+
+
+                            cartesiano.DrawLine(pen2, point1, pointhue);
+                            cartesiano.DrawLine(pen2, point3, point4);
+                            cartesiano.DrawLine(pen2, point5, point6);
+                            cartesiano.DrawLine(pen2, point7, point8);
+                            cartesiano.DrawLine(pen2, point9, point10);
+                            cartesiano.DrawLine(pen2, point11, point12);
+                            cartesiano.DrawLine(pen2, point13, point14);
+                            cartesiano.DrawLine(pen2, point15, point16);
+                            cartesiano.DrawLine(pen2, point17, point18);
+                            cartesiano.DrawLine(pen2, point19, point20);
+                            cartesiano.DrawLine(pen2, point21, point22);
+                            cartesiano.DrawLine(pen2, point23, point24);
+                            cartesiano.DrawLine(pen2, point25, point26);
+                            cartesiano.DrawLine(pen2, point27, point28);
+                            cartesiano.DrawLine(pen2, point29, point30);
+                            cartesiano.DrawLine(pen2, point31, point32);
+                            cartesiano.DrawLine(pen2, point33, point34);
+
+                            Point point35 = new Point(20, 0);
+                            Point point36 = new Point(20, 340);
+                            Point point37 = new Point(40, 0);
+                            Point point38 = new Point(40, 340);
+                            Point point39 = new Point(60, 0);
+                            Point point40 = new Point(60, 340);
+                            Point point41 = new Point(80, 0);
+                            Point point42 = new Point(80, 340);
+                            Point point43 = new Point(100, 0);
+                            Point point44 = new Point(100, 340);
+                            Point point45 = new Point(120, 0);
+                            Point point46 = new Point(120, 340);
+                            Point point47 = new Point(140, 0);
+                            Point point48 = new Point(140, 340);
+                            Point point49 = new Point(160, 0);
+                            Point point50 = new Point(160, 340);
+                            Point point51 = new Point(180, 0);
+                            Point point52 = new Point(180, 340);
+                            Point point53 = new Point(200, 0);
+                            Point point54 = new Point(200, 340);
+                            Point point55 = new Point(220, 0);
+                            Point point56 = new Point(220, 340);
+                            Point point57 = new Point(240, 0);
+                            Point point58 = new Point(240, 340);
+                            Point point59 = new Point(260, 0);
+                            Point point60 = new Point(260, 340);
+                            Point point61 = new Point(280, 0);
+                            Point point62 = new Point(280, 340);
+                            Point point63 = new Point(300, 0);
+                            Point point64 = new Point(300, 340);
+                            Point point65 = new Point(320, 0);
+                            Point point66 = new Point(320, 340);
+                            Point point67 = new Point(340, 0);
+                            Point point68 = new Point(340, 340);
+                            cartesiano.DrawLine(pen2, point35, point36);
+                            cartesiano.DrawLine(pen2, point37, point38);
+                            cartesiano.DrawLine(pen2, point39, point40);
+                            cartesiano.DrawLine(pen2, point41, point42);
+                            cartesiano.DrawLine(pen2, point43, point44);
+                            cartesiano.DrawLine(pen2, point45, point46);
+                            cartesiano.DrawLine(pen2, point47, point48);
+                            cartesiano.DrawLine(pen2, point49, point50);
+                            cartesiano.DrawLine(pen2, point51, point52);
+                            cartesiano.DrawLine(pen2, point53, point54);
+                            cartesiano.DrawLine(pen2, point55, point56);
+                            cartesiano.DrawLine(pen2, point57, point58);
+                            cartesiano.DrawLine(pen2, point59, point60);
+                            cartesiano.DrawLine(pen2, point61, point62);
+                            cartesiano.DrawLine(pen2, point63, point64);
+                            cartesiano.DrawLine(pen2, point65, point66);
+                            cartesiano.DrawLine(pen2, point67, point68);
+        
                            
                             
                             
@@ -1656,7 +1874,7 @@ namespace Calculadora_2._0
 
             Graphics j = pictureBox1.CreateGraphics();
 
-            j.Clear(Color.Transparent);
+            j.Clear(Color.White);
             Pen blackPen = new Pen(Color.Red, 1);
 
             PointF[] pontos;
@@ -1677,6 +1895,116 @@ namespace Calculadora_2._0
                 //MessageBox.Show("allahu akbar :" + desenho[0, i].Text + ", " + desenho[1, i].Text);
             }
             j.DrawPolygon(blackPen, pontos);
+            cartesiano = pictureBox1.CreateGraphics();
+            Pen pen2 = new Pen(Color.Black);
+
+            Point point1 = new Point(0, 20);
+            Point pointhue = new Point(340, 20);
+            Point point3 = new Point(0, 40);
+            Point point4 = new Point(340, 40);
+            Point point5 = new Point(0, 60);
+            Point point6 = new Point(340, 60);
+            Point point7 = new Point(0, 80);
+            Point point8 = new Point(340, 80);
+            Point point9 = new Point(0, 100);
+            Point point10 = new Point(340, 100);
+            Point point11 = new Point(0, 120);
+            Point point12 = new Point(340, 120);
+            Point point13 = new Point(0, 140);
+            Point point14 = new Point(340, 140);
+            Point point15 = new Point(0, 160);
+            Point point16 = new Point(340, 160);
+            Point point17 = new Point(0, 180);
+            Point point18 = new Point(340, 180);
+            Point point19 = new Point(0, 200);
+            Point point20 = new Point(340, 200);
+            Point point21 = new Point(0, 220);
+            Point point22 = new Point(340, 220);
+            Point point23 = new Point(0, 240);
+            Point point24 = new Point(340, 240);
+            Point point25 = new Point(0, 260);
+            Point point26 = new Point(340, 260);
+            Point point27 = new Point(0, 280);
+            Point point28 = new Point(340, 280);
+            Point point29 = new Point(0, 300);
+            Point point30 = new Point(340, 300);
+            Point point31 = new Point(0, 320);
+            Point point32 = new Point(340, 320);
+            Point point33 = new Point(0, 340);
+            Point point34 = new Point(340, 340);
+
+
+            cartesiano.DrawLine(pen2, point1, pointhue);
+            cartesiano.DrawLine(pen2, point3, point4);
+            cartesiano.DrawLine(pen2, point5, point6);
+            cartesiano.DrawLine(pen2, point7, point8);
+            cartesiano.DrawLine(pen2, point9, point10);
+            cartesiano.DrawLine(pen2, point11, point12);
+            cartesiano.DrawLine(pen2, point13, point14);
+            cartesiano.DrawLine(pen2, point15, point16);
+            cartesiano.DrawLine(pen2, point17, point18);
+            cartesiano.DrawLine(pen2, point19, point20);
+            cartesiano.DrawLine(pen2, point21, point22);
+            cartesiano.DrawLine(pen2, point23, point24);
+            cartesiano.DrawLine(pen2, point25, point26);
+            cartesiano.DrawLine(pen2, point27, point28);
+            cartesiano.DrawLine(pen2, point29, point30);
+            cartesiano.DrawLine(pen2, point31, point32);
+            cartesiano.DrawLine(pen2, point33, point34);
+
+            Point point35 = new Point(20, 0);
+            Point point36 = new Point(20, 340);
+            Point point37 = new Point(40, 0);
+            Point point38 = new Point(40, 340);
+            Point point39 = new Point(60, 0);
+            Point point40 = new Point(60, 340);
+            Point point41 = new Point(80, 0);
+            Point point42 = new Point(80, 340);
+            Point point43 = new Point(100, 0);
+            Point point44 = new Point(100, 340);
+            Point point45 = new Point(120, 0);
+            Point point46 = new Point(120, 340);
+            Point point47 = new Point(140, 0);
+            Point point48 = new Point(140, 340);
+            Point point49 = new Point(160, 0);
+            Point point50 = new Point(160, 340);
+            Point point51 = new Point(180, 0);
+            Point point52 = new Point(180, 340);
+            Point point53 = new Point(200, 0);
+            Point point54 = new Point(200, 340);
+            Point point55 = new Point(220, 0);
+            Point point56 = new Point(220, 340);
+            Point point57 = new Point(240, 0);
+            Point point58 = new Point(240, 340);
+            Point point59 = new Point(260, 0);
+            Point point60 = new Point(260, 340);
+            Point point61 = new Point(280, 0);
+            Point point62 = new Point(280, 340);
+            Point point63 = new Point(300, 0);
+            Point point64 = new Point(300, 340);
+            Point point65 = new Point(320, 0);
+            Point point66 = new Point(320, 340);
+            Point point67 = new Point(340, 0);
+            Point point68 = new Point(340, 340);
+            cartesiano.DrawLine(pen2, point35, point36);
+            cartesiano.DrawLine(pen2, point37, point38);
+            cartesiano.DrawLine(pen2, point39, point40);
+            cartesiano.DrawLine(pen2, point41, point42);
+            cartesiano.DrawLine(pen2, point43, point44);
+            cartesiano.DrawLine(pen2, point45, point46);
+            cartesiano.DrawLine(pen2, point47, point48);
+            cartesiano.DrawLine(pen2, point49, point50);
+            cartesiano.DrawLine(pen2, point51, point52);
+            cartesiano.DrawLine(pen2, point53, point54);
+            cartesiano.DrawLine(pen2, point55, point56);
+            cartesiano.DrawLine(pen2, point57, point58);
+            cartesiano.DrawLine(pen2, point59, point60);
+            cartesiano.DrawLine(pen2, point61, point62);
+            cartesiano.DrawLine(pen2, point63, point64);
+            cartesiano.DrawLine(pen2, point65, point66);
+            cartesiano.DrawLine(pen2, point67, point68);
+        
+                           
            
           
         }
@@ -1802,8 +2130,118 @@ namespace Calculadora_2._0
             }
 
             Graphics g = pictureBox1.CreateGraphics();
-            g.Clear(Color.Transparent);
+            g.Clear(Color.White);
             g.DrawPolygon(blackPen, pontos);
+            cartesiano = pictureBox1.CreateGraphics();
+            Pen pen2 = new Pen(Color.Black);
+
+            Point point1 = new Point(0, 20);
+            Point pointhue = new Point(340, 20);
+            Point point3 = new Point(0, 40);
+            Point point4 = new Point(340, 40);
+            Point point5 = new Point(0, 60);
+            Point point6 = new Point(340, 60);
+            Point point7 = new Point(0, 80);
+            Point point8 = new Point(340, 80);
+            Point point9 = new Point(0, 100);
+            Point point10 = new Point(340, 100);
+            Point point11 = new Point(0, 120);
+            Point point12 = new Point(340, 120);
+            Point point13 = new Point(0, 140);
+            Point point14 = new Point(340, 140);
+            Point point15 = new Point(0, 160);
+            Point point16 = new Point(340, 160);
+            Point point17 = new Point(0, 180);
+            Point point18 = new Point(340, 180);
+            Point point19 = new Point(0, 200);
+            Point point20 = new Point(340, 200);
+            Point point21 = new Point(0, 220);
+            Point point22 = new Point(340, 220);
+            Point point23 = new Point(0, 240);
+            Point point24 = new Point(340, 240);
+            Point point25 = new Point(0, 260);
+            Point point26 = new Point(340, 260);
+            Point point27 = new Point(0, 280);
+            Point point28 = new Point(340, 280);
+            Point point29 = new Point(0, 300);
+            Point point30 = new Point(340, 300);
+            Point point31 = new Point(0, 320);
+            Point point32 = new Point(340, 320);
+            Point point33 = new Point(0, 340);
+            Point point34 = new Point(340, 340);
+
+
+            cartesiano.DrawLine(pen2, point1, pointhue);
+            cartesiano.DrawLine(pen2, point3, point4);
+            cartesiano.DrawLine(pen2, point5, point6);
+            cartesiano.DrawLine(pen2, point7, point8);
+            cartesiano.DrawLine(pen2, point9, point10);
+            cartesiano.DrawLine(pen2, point11, point12);
+            cartesiano.DrawLine(pen2, point13, point14);
+            cartesiano.DrawLine(pen2, point15, point16);
+            cartesiano.DrawLine(pen2, point17, point18);
+            cartesiano.DrawLine(pen2, point19, point20);
+            cartesiano.DrawLine(pen2, point21, point22);
+            cartesiano.DrawLine(pen2, point23, point24);
+            cartesiano.DrawLine(pen2, point25, point26);
+            cartesiano.DrawLine(pen2, point27, point28);
+            cartesiano.DrawLine(pen2, point29, point30);
+            cartesiano.DrawLine(pen2, point31, point32);
+            cartesiano.DrawLine(pen2, point33, point34);
+
+            Point point35 = new Point(20, 0);
+            Point point36 = new Point(20, 340);
+            Point point37 = new Point(40, 0);
+            Point point38 = new Point(40, 340);
+            Point point39 = new Point(60, 0);
+            Point point40 = new Point(60, 340);
+            Point point41 = new Point(80, 0);
+            Point point42 = new Point(80, 340);
+            Point point43 = new Point(100, 0);
+            Point point44 = new Point(100, 340);
+            Point point45 = new Point(120, 0);
+            Point point46 = new Point(120, 340);
+            Point point47 = new Point(140, 0);
+            Point point48 = new Point(140, 340);
+            Point point49 = new Point(160, 0);
+            Point point50 = new Point(160, 340);
+            Point point51 = new Point(180, 0);
+            Point point52 = new Point(180, 340);
+            Point point53 = new Point(200, 0);
+            Point point54 = new Point(200, 340);
+            Point point55 = new Point(220, 0);
+            Point point56 = new Point(220, 340);
+            Point point57 = new Point(240, 0);
+            Point point58 = new Point(240, 340);
+            Point point59 = new Point(260, 0);
+            Point point60 = new Point(260, 340);
+            Point point61 = new Point(280, 0);
+            Point point62 = new Point(280, 340);
+            Point point63 = new Point(300, 0);
+            Point point64 = new Point(300, 340);
+            Point point65 = new Point(320, 0);
+            Point point66 = new Point(320, 340);
+            Point point67 = new Point(340, 0);
+            Point point68 = new Point(340, 340);
+            cartesiano.DrawLine(pen2, point35, point36);
+            cartesiano.DrawLine(pen2, point37, point38);
+            cartesiano.DrawLine(pen2, point39, point40);
+            cartesiano.DrawLine(pen2, point41, point42);
+            cartesiano.DrawLine(pen2, point43, point44);
+            cartesiano.DrawLine(pen2, point45, point46);
+            cartesiano.DrawLine(pen2, point47, point48);
+            cartesiano.DrawLine(pen2, point49, point50);
+            cartesiano.DrawLine(pen2, point51, point52);
+            cartesiano.DrawLine(pen2, point53, point54);
+            cartesiano.DrawLine(pen2, point55, point56);
+            cartesiano.DrawLine(pen2, point57, point58);
+            cartesiano.DrawLine(pen2, point59, point60);
+            cartesiano.DrawLine(pen2, point61, point62);
+            cartesiano.DrawLine(pen2, point63, point64);
+            cartesiano.DrawLine(pen2, point65, point66);
+            cartesiano.DrawLine(pen2, point67, point68);
+        
+                           
                            
                             
                             
@@ -1879,8 +2317,118 @@ namespace Calculadora_2._0
             }
 
             Graphics g = pictureBox1.CreateGraphics();
-            g.Clear(Color.Transparent);
+            g.Clear(Color.White);
             g.DrawPolygon(blackPen, pontos);
+            cartesiano = pictureBox1.CreateGraphics();
+            Pen pen2 = new Pen(Color.Black);
+
+            Point point1 = new Point(0, 20);
+            Point pointhue = new Point(340, 20);
+            Point point3 = new Point(0, 40);
+            Point point4 = new Point(340, 40);
+            Point point5 = new Point(0, 60);
+            Point point6 = new Point(340, 60);
+            Point point7 = new Point(0, 80);
+            Point point8 = new Point(340, 80);
+            Point point9 = new Point(0, 100);
+            Point point10 = new Point(340, 100);
+            Point point11 = new Point(0, 120);
+            Point point12 = new Point(340, 120);
+            Point point13 = new Point(0, 140);
+            Point point14 = new Point(340, 140);
+            Point point15 = new Point(0, 160);
+            Point point16 = new Point(340, 160);
+            Point point17 = new Point(0, 180);
+            Point point18 = new Point(340, 180);
+            Point point19 = new Point(0, 200);
+            Point point20 = new Point(340, 200);
+            Point point21 = new Point(0, 220);
+            Point point22 = new Point(340, 220);
+            Point point23 = new Point(0, 240);
+            Point point24 = new Point(340, 240);
+            Point point25 = new Point(0, 260);
+            Point point26 = new Point(340, 260);
+            Point point27 = new Point(0, 280);
+            Point point28 = new Point(340, 280);
+            Point point29 = new Point(0, 300);
+            Point point30 = new Point(340, 300);
+            Point point31 = new Point(0, 320);
+            Point point32 = new Point(340, 320);
+            Point point33 = new Point(0, 340);
+            Point point34 = new Point(340, 340);
+
+
+            cartesiano.DrawLine(pen2, point1, pointhue);
+            cartesiano.DrawLine(pen2, point3, point4);
+            cartesiano.DrawLine(pen2, point5, point6);
+            cartesiano.DrawLine(pen2, point7, point8);
+            cartesiano.DrawLine(pen2, point9, point10);
+            cartesiano.DrawLine(pen2, point11, point12);
+            cartesiano.DrawLine(pen2, point13, point14);
+            cartesiano.DrawLine(pen2, point15, point16);
+            cartesiano.DrawLine(pen2, point17, point18);
+            cartesiano.DrawLine(pen2, point19, point20);
+            cartesiano.DrawLine(pen2, point21, point22);
+            cartesiano.DrawLine(pen2, point23, point24);
+            cartesiano.DrawLine(pen2, point25, point26);
+            cartesiano.DrawLine(pen2, point27, point28);
+            cartesiano.DrawLine(pen2, point29, point30);
+            cartesiano.DrawLine(pen2, point31, point32);
+            cartesiano.DrawLine(pen2, point33, point34);
+
+            Point point35 = new Point(20, 0);
+            Point point36 = new Point(20, 340);
+            Point point37 = new Point(40, 0);
+            Point point38 = new Point(40, 340);
+            Point point39 = new Point(60, 0);
+            Point point40 = new Point(60, 340);
+            Point point41 = new Point(80, 0);
+            Point point42 = new Point(80, 340);
+            Point point43 = new Point(100, 0);
+            Point point44 = new Point(100, 340);
+            Point point45 = new Point(120, 0);
+            Point point46 = new Point(120, 340);
+            Point point47 = new Point(140, 0);
+            Point point48 = new Point(140, 340);
+            Point point49 = new Point(160, 0);
+            Point point50 = new Point(160, 340);
+            Point point51 = new Point(180, 0);
+            Point point52 = new Point(180, 340);
+            Point point53 = new Point(200, 0);
+            Point point54 = new Point(200, 340);
+            Point point55 = new Point(220, 0);
+            Point point56 = new Point(220, 340);
+            Point point57 = new Point(240, 0);
+            Point point58 = new Point(240, 340);
+            Point point59 = new Point(260, 0);
+            Point point60 = new Point(260, 340);
+            Point point61 = new Point(280, 0);
+            Point point62 = new Point(280, 340);
+            Point point63 = new Point(300, 0);
+            Point point64 = new Point(300, 340);
+            Point point65 = new Point(320, 0);
+            Point point66 = new Point(320, 340);
+            Point point67 = new Point(340, 0);
+            Point point68 = new Point(340, 340);
+            cartesiano.DrawLine(pen2, point35, point36);
+            cartesiano.DrawLine(pen2, point37, point38);
+            cartesiano.DrawLine(pen2, point39, point40);
+            cartesiano.DrawLine(pen2, point41, point42);
+            cartesiano.DrawLine(pen2, point43, point44);
+            cartesiano.DrawLine(pen2, point45, point46);
+            cartesiano.DrawLine(pen2, point47, point48);
+            cartesiano.DrawLine(pen2, point49, point50);
+            cartesiano.DrawLine(pen2, point51, point52);
+            cartesiano.DrawLine(pen2, point53, point54);
+            cartesiano.DrawLine(pen2, point55, point56);
+            cartesiano.DrawLine(pen2, point57, point58);
+            cartesiano.DrawLine(pen2, point59, point60);
+            cartesiano.DrawLine(pen2, point61, point62);
+            cartesiano.DrawLine(pen2, point63, point64);
+            cartesiano.DrawLine(pen2, point65, point66);
+            cartesiano.DrawLine(pen2, point67, point68);
+        
+                           
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
